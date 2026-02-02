@@ -19,3 +19,12 @@ int main(){
 }
 
 //Do not modify source code above this line
+void shuffle(int &a, int &b, int &c, int &d){
+	int *money[] = {&a, &b, &c, &d};
+	for(int i = 0; i < 4; i++){
+		int r = rand() % 4;
+		int temp = *money[i];
+		*money[i] = *money[r];
+		*money[r] = temp;
+	}
+}
